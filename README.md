@@ -1,3 +1,3 @@
-# PrimeNg Starter
+# Admin - Angular 2
 
 
