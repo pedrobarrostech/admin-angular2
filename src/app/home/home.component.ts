@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit{
     events: any;
     defaultDate: string = new Date().toLocaleDateString('en-US');
     header: any;
+    br: any;
     event: Schedule;
     dialogVisible: boolean = false;
     idGen: number = 100;
@@ -30,8 +31,31 @@ export class HomeComponent implements OnInit{
         this.header = {
             left: 'prev,next today',
             center: 'title',
-            right: 'month,agendaWeek,agendaDay',
-            locate: 'pt-br'
+            right: 'month,agendaWeek,agendaDay'
+        };
+
+        this.br = {
+            ignoreTimezone: false,
+            monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 
+            'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado'],
+            dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+            axisFormat: 'H:mm',
+            timeFormat: {
+                '': 'H:mm',
+                agenda: 'H:mm{ - H:mm}'
+            },
+            buttonText: {
+                prev: 'Anterior',
+                next: 'Próximo',
+                prevYear: 'Ano Anterior',
+                nextYear: 'Próximo Ano',
+                today: 'Hoje',
+                month: 'Mês',
+                week: 'Semana',
+                day: 'Dia'
+            }
         };
     }
 
